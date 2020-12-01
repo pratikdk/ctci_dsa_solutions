@@ -1,3 +1,49 @@
+from linked_list import nodelist_builder, printNodes
+from linked_list import LinkedList, linkedList_builder
+
+def remove_duplicates(node):
+    map = {}
+    previous = None
+    while(node != None):
+        if node.data not in map:
+            map[node.data] = 1
+            if previous:
+                previous.next = node
+                previous = previous.next
+            else:
+                previous = node
+        node = node.next
+
+if __name__ == "__main__":
+    data = [1, 2, 3, 4, 4, 5]
+    head = nodelist_builder(data)
+    remove_duplicates(head)
+    printNodes(head)
+
+
+# def remove_duplicates(llist):
+#     map = {}
+#     previous = None
+#     head = llist.head
+#     while(head != None):
+#         if head.data not in map:
+#             map[head.data] = 1
+#             if previous:
+#                 previous.next = head
+#                 previous = previous.next
+#             else:
+#                 previous = head
+#         head = head.next
+
+
+# if __name__ == "__main__":
+#     data = [1, 2, 3, 4, 4, 5]
+#     llist = linkedList_builder(data)
+#     llist.printList()
+#     remove_duplicates(llist)
+#     llist.printList()
+
+
 # class Node():
 #     def __init__(self, data):
 #         self.data = data
