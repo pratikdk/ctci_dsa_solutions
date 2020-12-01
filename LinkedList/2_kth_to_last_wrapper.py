@@ -12,7 +12,7 @@ def find_kth_to_last(node, k, count):
     if count.value == k:
         return node
     return n
-    
+
 
 def kth_to_last(node, k):
     count = Count()
