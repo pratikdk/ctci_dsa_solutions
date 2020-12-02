@@ -1,12 +1,12 @@
 class Node():
-    def __init__(self, data):
+    def __init__(self, data=None):
         self.data = data
         self.next = None
 
 class LinkedList():
     def __init__(self):
         self.head = self.tail = None
-        
+
     def printList(self):
         temp = self.head
         while(temp):
