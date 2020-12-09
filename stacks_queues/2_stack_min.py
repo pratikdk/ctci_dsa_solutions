@@ -7,7 +7,7 @@ class NodeWithMin:
 
 class StackWithMin(Stack):
     def __init__(self):
-        super(StackWithMin, self).__init__()
+        super().__init__()
 
     def min(self):
         if self.is_empty():
