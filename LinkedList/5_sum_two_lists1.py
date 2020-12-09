@@ -1,4 +1,5 @@
 # (7-> 1 -> 6) + (5 -> 9 -> 2).That is,617 + 295
+
 from linked_list import Node, nodelist_builder, printNodes
 
 def sum_two_list(node1, node2, carry):
@@ -22,7 +23,8 @@ def sum_two_list(node1, node2, carry):
 
 if __name__ == "__main__":
     data = [
-        ([7, 1, 6], [5, 9, 2])
+        #([7, 1, 6], [5, 9, 2])
+        ([9, 9], [9, 9])
     ]
     head1 = nodelist_builder(data[0][0])
     head2 = nodelist_builder(data[0][1])

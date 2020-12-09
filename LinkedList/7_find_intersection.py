@@ -6,8 +6,8 @@ class Result():
         self.size = size
 
 def get_tail_and_size(node):
-    counter = 0
-    while node != None:
+    counter = 1
+    while node.next != None:
         counter += 1
         node = node.next
     return Result(node, counter)

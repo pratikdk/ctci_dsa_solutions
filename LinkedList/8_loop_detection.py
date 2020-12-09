@@ -3,7 +3,7 @@ from linked_list import Node, nodelist_builder, printNodes
 def find_loop_begining(node):
     slow = node
     fast = node # 2x faster than slow
-    while True:
+    while fast != None and fast.next != None:
         slow = slow.next
         fast = fast.next.next
         if slow == fast: # Collision
@@ -11,7 +11,8 @@ def find_loop_begining(node):
     slow = node # Rest slow back to start of list
     while slow != fast:
         slow = slow.next
-        fast = fast.next
+        if fast != None:
+            fast = fast.next
     return fast
 
 
