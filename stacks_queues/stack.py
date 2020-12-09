@@ -1,5 +1,7 @@
 class Stack:
     def __init__(self, capacity=None):
+        if capacity and capacity < 1:
+            raise ValueError("Capacity cannot be <= 0")
         self.capacity = capacity
         self.size = 0
         self.values = []
@@ -18,7 +20,7 @@ class Stack:
             self.size += 1
 
     def pop(self):
-        if self.size == 0:
+        if self.is_empty():
             raise Exception("Stack is empty")
         value = None
         if self.capacity:
@@ -30,9 +32,17 @@ class Stack:
         return value
 
     def peek(self):
-        if self.size == 0:
+        if self.is_empty():
             raise Exception("Stack is empty")
         return self.values[self.size-1]
+
+    def is_full(self):
+        if not self.capacity:
+            raise Exception("This is a flexible stack")
+        return self.size == self.capacity
+
+    def is_empty(self):
+        return self.size == 0
 
     def __repr__(self):
         return f"{self.values}" #'%s' % (self.values)
