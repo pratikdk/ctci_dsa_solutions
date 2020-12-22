@@ -31,14 +31,6 @@ class Graph:
                 temp = temp.next
             print("\n")
 
-    def get_adjacents(self, node):
-        adjacents = []
-        while node:
-            adjacents.append(node)
-            node = node.next
-        return adjacents
-
-
 if __name__ == "__main__":
     V = 5
     graph = Graph(V)
@@ -51,9 +43,3 @@ if __name__ == "__main__":
     graph.add_edge(3, 4)
     # Print Adjacency list
     graph.print_graph()
-    print(graph.get_nodes()[-1].value)
-    adjs = graph.get_adjacents(graph.get_nodes()[-1])
-    for n in adjs:
-        print(f"value: {n.value}")
-    # print(graph.get_adjacents(graph.get_nodes()[-1]))
-    # print(graph.get_adjacents(graph.get_nodes()[-1]))
