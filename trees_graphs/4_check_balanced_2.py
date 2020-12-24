@@ -2,7 +2,6 @@ from tree_node import TreeNode
 
 def is_balanced(root):
     return check_height(root) != float('-inf')
-    if root == None: return True
 
 
 def check_height(root):
