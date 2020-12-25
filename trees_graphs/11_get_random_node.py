@@ -5,7 +5,7 @@ class TreeNode:
         self.value = value
         self.left = None
         self.right = None
-        self.size = 0
+        self.size = 1
 
     def insert(self, value):
         if value <= self.value:
@@ -26,7 +26,7 @@ class TreeNode:
         if index < leftsize:
             return self.left.get_random()
         elif index == leftsize:
-            return this
+            return self
         else:
             return self.right.get_random()
 
@@ -43,3 +43,12 @@ class TreeNode:
 
     def get_value(self):
         return self.value
+
+
+if __name__ == "__main__":
+    t = TreeNode(2)
+    t.insert(1)
+    t.insert(3)
+    t.insert(4)
+    t.insert(0)
+    print(t.get_random().value)
