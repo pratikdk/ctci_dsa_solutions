@@ -24,10 +24,13 @@ def sum_two_list(node1, node2, carry):
 if __name__ == "__main__":
     data = [
         #([7, 1, 6], [5, 9, 2])
+        ([6, 1, 7], [2, 9, 5]),
         ([9, 9], [9, 9])
     ]
-    head1 = nodelist_builder(data[0][0])
-    head2 = nodelist_builder(data[0][1])
-    rhead = sum_two_list(head1, head2, 0)
-    #delete_middle_node(head.next.next)
-    printNodes(rhead)
+    for d in data:
+        head1 = nodelist_builder(d[0])
+        head2 = nodelist_builder(d[1])
+        rhead = sum_two_list(head1, head2, 0)
+        #delete_middle_node(head.next.next)
+        printNodes(rhead)
+        print()

@@ -9,7 +9,7 @@ def is_palindrome_permutation(string):
         char_position = get_char_number(char)
         if char_position != -1:
             alphaset_counts[char_position] += 1
-            if alphaset_counts[char_position] % 2: # odd
+            if alphaset_counts[char_position] % 2: # odd == 1+
                 odd_count += 1
             else: # even
                 odd_count -= 1

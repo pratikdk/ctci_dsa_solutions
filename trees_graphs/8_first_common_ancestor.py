@@ -4,7 +4,7 @@ def common_ancestor(a, b):
     delta = depth(a) - depth(b)
     shallow_node = b if delta > 0 else a
     deeper_node = a if delta > 0 else b
-    deeper_node = go_upby(deeper_node, delta)
+    deeper_node = go_upby(deeper_node, abs(delta))
     while shallow_node != deeper_node and shallow_node != None and deeper_node != None:
         # move up for both
         shallow_node = shallow_node.parent
@@ -21,7 +21,7 @@ def go_upby(node, delta):
 
 def depth(node):
     depth = 0
-    while node != None:
+    while node != None and node.parent != None:
         node = node.parent
         depth += 1
     return depth

@@ -25,7 +25,7 @@ if __name__ == "__main__":
     n4 = TreeNode(4)
     n5 = TreeNode(5)
     n2.left = n1
-    n2.right = n3
-    n3.left = n4
-    n3.right = n5
+    n2.right = n4
+    n4.left = n3
+    n4.right = n5
     print(matchtree(n3, n3))

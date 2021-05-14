@@ -20,14 +20,17 @@ def get_leftmost_child(n):
 
 
 if __name__ == "__main__":
+    n0 = TreeNode(0)
     n1 = TreeNode(1)
     n2 = TreeNode(2)
     n3 = TreeNode(3)
-    n4 = TreeNode(4)
+    n_1 = TreeNode(-1)
     n2.left = n1
     n1.parent = n2
     n2.right = n3
     n3.parent = n2
-    n4.left = n2
-    n2.parent = n4
+    n0.right = n2
+    n2.parent = n0
+    n0.left = n_1
+    n_1.parent = n0
     print(inorder_succ(n2).value)

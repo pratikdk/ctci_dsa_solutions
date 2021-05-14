@@ -31,6 +31,7 @@ class Test(unittest.TestCase):
     def test_run(self):
         for test_tup in self.dataT:
             result = check_permutation(*test_tup)
+            print(result)
             self.assertTrue(result)
         for test_tup in self.dataF:
             result = check_permutation(*test_tup)

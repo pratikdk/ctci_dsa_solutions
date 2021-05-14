@@ -6,6 +6,7 @@ def kth_to_last(node, k):
     p2 = node
     for _ in range(k):
         p1 = p1.next
+    print(p1.next.data)
     while p1 != None:
         p1 = p1.next
         p2 = p2.next

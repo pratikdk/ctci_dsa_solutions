@@ -42,10 +42,15 @@ def weave_left_right_lists(left_seq, right_seq, weaved, prefix):
     prefix.pop()
     right_seq.insert(0, right)
 
+
 if __name__ == "__main__":
     n1 = TreeNode(1)
     n2 = TreeNode(2)
     n3 = TreeNode(3)
+    # n4 = TreeNode(0)
+    # n5 = TreeNode(-1)
     n2.left = n1
     n2.right = n3
+    # n1.left = n4
+    # n4.left = n5
     print(all_sequences(n2))

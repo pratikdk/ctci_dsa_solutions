@@ -20,6 +20,7 @@ def get_kth_node(node, k):
 
 
 def find_intersection(node1, node2):
+    #if node1 == None or node2 == None: return None
     result1 = get_tail_and_size(node1)
     result2 = get_tail_and_size(node2)
     if result1.tail != result2.tail:

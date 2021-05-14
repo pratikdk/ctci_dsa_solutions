@@ -4,6 +4,7 @@ def urlify(char_list, length):
     max_index = len(char_list)
 
     for i in reversed(range(length)):
+        print(i, char_list[i])
         if char_list[i] == ' ':
             char_list[max_index-3: max_index] = '%20'
             max_index -= 3

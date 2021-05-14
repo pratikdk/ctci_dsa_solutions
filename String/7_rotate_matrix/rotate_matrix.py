@@ -5,7 +5,7 @@ def rotate(matrix):
     n = len(matrix[0])
     for layer in range(int(n/2)):
         first = layer
-        last = n - 1 - first
+        last = n - 1 - first # total - 0_index - layers_flipped_until_now
         for i in range(first, last):
             offset = i - first
             # Temporary save first of the 4 values
@@ -30,8 +30,9 @@ def print_matrix(matrix):
             buffer.append(matrix[i][j])
         print(buffer)
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     n = 5
     ix = 11
     data = [list(range(i, i+n)) for i in range(ix, ix+n*n, n)]
+    print_matrix(data)
     rotate(data)

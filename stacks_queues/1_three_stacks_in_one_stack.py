@@ -11,7 +11,6 @@ class FixedMultiStack():
         self.sizes[stack_num] += 1
         self.values[self.index_of_top(stack_num)] = value
 
-
     def pop(self, stack_num):
         if self.is_empty(stack_num):
             raise Exception(f"Stack: {stack_num} is empty")

@@ -3,7 +3,7 @@ import unittest
 def is_unique(string):
     checker = 0
     for char in string:
-        char_ord = ord(char) - ord('a')
+        char_ord = ord(char) # ord(char) - ord('a')
         if (checker & (1 << char_ord)) > 0:
             return False
         checker |= (1 << char_ord)

@@ -2,8 +2,8 @@ import unittest
 
 def is_palindrome_permutation(string):
     bit_vector = construct_bit_vector(string)
-    return (bit_vector == 0) | check_exactly_one_bit_set(bit_vector)
-    
+    return (bit_vector == 0) | check_exactly_one_bit_set(bit_vector) # one extra char is allowed
+
 
 def construct_bit_vector(string):
     bit_vector = 0
@@ -17,8 +17,8 @@ def toggle(bit_vector, char_position):
     if (char_position < 0):
         return bit_vector
     mask = 1 << char_position # Shift one by about char_position to the left
-    if (bit_vector & mask) == 0:
-        bit_vector |= mask # toggle up
+    if (bit_vector & mask) == 0: # if not Already activated bit
+        bit_vector |= mask # toggle up # Activate it
     else:
         bit_vector &= ~mask # reset down
     return bit_vector
@@ -37,7 +37,7 @@ def get_char_number(char):
 
     if a <= c <= z:
         return c - a
-    elif A <= c <= z:
+    elif A <= c <= Z:
         return c - A
     return -1
 

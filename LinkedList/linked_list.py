@@ -15,14 +15,14 @@ class LinkedList():
 
 def linkedList_builder(data):
     llist = LinkedList()
-    previous = None
+    #previous = None
     for i in data:
         if llist.head:
-            previous.next = Node(i)
-            previous = previous.next
+            llist.tail.next = Node(i)
+            llist.tail = llist.tail.next
         else:
-            llist.head = Node(i)
-            previous = llist.head
+            llist.head = llist.tail = Node(i)
+            #previous = llist.head
     return llist
 
 def nodelist_builder(data):

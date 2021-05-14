@@ -50,10 +50,18 @@ def sum_list_helper(node1, node2):
 
 if __name__ == "__main__":
     data = [
-        ([6, 1, 7, 1], [2, 9, 5])
+        ([6, 1, 7, 1], [2, 9, 5]),
+        ([9, 9], [9, 9])
     ]
-    head1 = nodelist_builder(data[0][0])
-    head2 = nodelist_builder(data[0][1])
-    rhead = sum_two_list(head1, head2)
-    sum_two_list(head1, head2)
-    printNodes(rhead)
+    # head1 = nodelist_builder(data[0][0])
+    # head2 = nodelist_builder(data[0][1])
+    # rhead = sum_two_list(head1, head2)
+    # sum_two_list(head1, head2)
+    # printNodes(rhead)
+
+    for d in data:
+        head1 = nodelist_builder(d[0])
+        head2 = nodelist_builder(d[1])
+        rhead = sum_two_list(head1, head2)
+        printNodes(rhead)
+        print()
