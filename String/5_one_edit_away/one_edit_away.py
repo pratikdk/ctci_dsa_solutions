@@ -66,8 +66,10 @@ def is_one_edit(str1, str2):
     return edit_count
 
 #print(is_one_edit('pdoraledor', 'ple'))
-print(is_one_edit('pale', 'ple'))
+print(is_one_edit('plea', 'plea'))
+print(is_one_edit('padle', 'plea'))
 print(is_one_edit('pdorale', 'ple'))
+print(is_one_edit('paddor', 'pddore'))
 print(is_one_edit('paledor', 'ple'))
 
 # class Test(unittest.TestCase):

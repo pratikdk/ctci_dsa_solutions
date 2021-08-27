@@ -17,26 +17,26 @@ def partition(node, x):
     # Dereference tail
     tail.next = None
     return head
-    
-    ([10, 1, 2, 3, 4, 2, 4, 5], 3),
-    ([3, 5, 8, 5, 10, 2, 1], 5)
 
-def partition(node, threshold):
-    left = node
-    head = node
-    previous = None
-    while head != None:
-        if head.data < threshold:
-            next = head.next
-            if previous:
-                previous.next = next
-            else:
-                previous =
-            head.next = left
-            head = next
-        else:
-            previous = head
-            head = head.next
+    # ([10, 1, 2, 3, 4, 2, 4, 5], 3),
+    # ([3, 5, 8, 5, 10, 2, 1], 5)
+
+# def partition(node, threshold):
+#     left = node
+#     head = node
+#     previous = None
+#     while head != None:
+#         if head.data < threshold:
+#             next = head.next
+#             if previous:
+#                 previous.next = next
+#             else:
+#                 previous =
+#             head.next = left
+#             head = next
+#         else:
+#             previous = head
+#             head = head.next
 
 
 if __name__ == "__main__":

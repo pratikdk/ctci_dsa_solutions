@@ -35,4 +35,5 @@ if __name__ == "__main__":
     ix = 11
     data = [list(range(i, i+n)) for i in range(ix, ix+n*n, n)]
     print_matrix(data)
+    print()
     rotate(data)

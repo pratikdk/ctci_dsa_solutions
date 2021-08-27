@@ -50,7 +50,7 @@ def sum_list_helper(node1, node2):
 
 if __name__ == "__main__":
     data = [
-        ([6, 1, 7, 1], [2, 9, 5]),
+        ([6, 1, 7], [2, 9, 5]),
         ([9, 9], [9, 9])
     ]
     # head1 = nodelist_builder(data[0][0])

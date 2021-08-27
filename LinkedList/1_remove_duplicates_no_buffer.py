@@ -20,12 +20,14 @@ def remove_duplicates(node):
         while current.data == runner.data:
             runner = runner.next
             current.next = runner
+            if runner == None: return
         current = current.next
         runner = runner.next
 
 
 if __name__ == "__main__":
-    data = [1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5]
+    data = [1, 2, 2, 2]
+    #data = [1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5]
     head = nodelist_builder(data)
     remove_duplicates(head)
     printNodes(head)
